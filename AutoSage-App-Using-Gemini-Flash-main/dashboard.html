@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>VehicleX — Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <nav class="dash-navbar">
+    <div class="dash-logo">VehicleX</div>
+    <div class="dash-nav-right">
+      <div id="usernameDisplay">Logged in as: Guest</div>
+      <button id="loginBtn" style="display:none">Login</button>
+      <button id="logoutBtn" style="display:none">Logout</button>
+    </div>
+  </nav>
+
+  <div class="dash-layout">
+    <aside class="sidebar">
+      <ul>
+        <li class="active">Overview</li>
+        <li onclick="location.href='selection.html'">Search & Compare</li>
+        <li onclick="location.href='selection.html#recommendation'">Recommendations</li>
+        <li onclick="location.href='login.html'">Account</li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <header class="main-header">
+        <h1>Dashboard</h1>
+        <p class="subtitle">A simple, clear overview of recent activity and system status.</p>
+      </header>
+
+      <section class="cards">
+        <div class="card">
+          <h3 id="totalSearches">0</h3>
+          <p>Searches</p>
+        </div>
+        <div class="card">
+          <h3 id="totalComparisons">0</h3>
+          <p>Comparisons</p>
+        </div>
+        <div class="card">
+          <h3 id="totalRecommendations">0</h3>
+          <p>Recommendations</p>
+        </div>
+      </section>
+
+      <section class="chart-section">
+        <h2>Activity (last 7 days)</h2>
+        <canvas id="activityChart"></canvas>
+      </section>
+
+      <section class="recent-section">
+        <h2>Recent Activity</h2>
+        <table class="recent-table">
+          <thead>
+            <tr><th>Time</th><th>Type</th><th>Details</th></tr>
+          </thead>
+          <tbody id="recentBody">
+            <!-- JS populates this -->
+          </tbody>
+        </table>
+      </section>
+
+      <section class="quick-actions">
+        <h2>Quick Actions</h2>
+        <div class="actions">
+          <button onclick="location.href='selection.html'">Search Vehicles</button>
+          <button onclick="location.href='selection.html'">Compare Vehicles</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>

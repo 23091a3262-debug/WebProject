@@ -1,0 +1,25 @@
+/* Dashboard layout */
+*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{margin:0;background:linear-gradient(180deg,#f7f8fc,#eef2f8);color:#1f2937}
+.dash-navbar{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:#fff;border-bottom:1px solid #e6e9ef}
+.dash-logo{font-weight:700;color:#0f172a}
+.dash-nav-right{display:flex;align-items:center;gap:12px}
+.dash-nav-right button{background:#ff9100;border:none;color:#fff;padding:8px 12px;border-radius:6px;cursor:pointer}
+.dash-layout{display:grid;grid-template-columns:220px 1fr;gap:20px;padding:24px}
+.sidebar{background:#fff;border:1px solid #e6e9ef;border-radius:8px;padding:14px;height:calc(100vh - 96px)}
+.sidebar ul{list-style:none;padding:0}
+.sidebar li{padding:10px;border-radius:6px;cursor:pointer;color:#374151}
+.sidebar li.active{background:#ffedd5;color:#9a3412;font-weight:600}
+.main{background:#fff;border:1px solid #e6e9ef;border-radius:8px;padding:18px}
+.main-header h1{margin:0;font-size:22px}
+.subtitle{color:#6b7280;margin-top:6px}
+.cards{display:flex;gap:12px;margin:16px 0}
+.card{flex:1;background:#fffbf2;border-left:4px solid #ffb347;padding:14px;border-radius:8px}
+.card h3{font-size:28px;margin:0}
+.chart-section{margin-top:8px}
+.recent-section{margin-top:20px}
+.recent-table{width:100%;border-collapse:collapse}
+.recent-table th,.recent-table td{padding:10px;text-align:left;border-bottom:1px solid #f1f5f9}
+.quick-actions{margin-top:20px}
+.actions button{margin-right:10px;padding:8px 12px;border-radius:6px;border:1px solid #e6e9ef;background:#fff;cursor:pointer}
+@media (max-width:800px){.dash-layout{grid-template-columns:1fr}}
