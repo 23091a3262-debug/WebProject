@@ -1,2 +1,2 @@
-# WebProject
-WebProject Description
+AutoSage is an intelligent, AI-powered web application designed to act as a smart vehicle assistant. The application leverages Google Gemini Flash to provide fast, contextual, and automated insights related to vehicles, user queries, and dashboard navigation. The goal of AutoSage is to enhance user experience by offering real-time guidance, recommendations, and decision support through a simple and interactive dashboard.
+
